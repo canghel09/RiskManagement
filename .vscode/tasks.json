@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "build.mta",
+			"label": "Build ",
+			"taskType": "Build",
+			"projectPath": "/home/user/projects/risk-management",
+			"extensions": []
+		},
+		{
+			"type": "deploy.mta.cf",
+			"label": "Deploy to Cloud Foundry ",
+			"taskType": "Deploy",
+			"mtarPath": "/home/user/projects/risk-management/mta_archives/risk-management_0.0.1.mtar",
+			"extensions": [],
+			"dependsOn": [
+				"Build "
+			],
+			"cfTarget": "CFTarget",
+			"cfEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+			"cfOrg": "9d4e374dtrial",
+			"cfSpace": "dev"
+		}
+	]
+}
