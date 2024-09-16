@@ -31,3 +31,6 @@ mta_archives/
 # .idea
 
 .env
+
+# auto generated wildcard
+db/.env
